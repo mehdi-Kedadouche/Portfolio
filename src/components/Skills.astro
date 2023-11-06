@@ -1,0 +1,73 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Développement Front-End</h2>
+		<p>Maîtrise des technologies frontales telles que HTML, CSS et JavaScript pour créer des interfaces utilisateur attrayantes et interactives.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="database" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Gestion de Bases de Données</h2>
+		<p>Expérience dans la conception et la gestion de bases de données SQL et NoSQL pour stocker et récupérer efficacement les données.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="list" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Gestion de Versions</h2>
+		<p>Utilisation de systèmes de gestion de versions tels que Git pour collaborer de manière efficace et maintenir un historique de code fiable.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Développement Back-End</h2>
+		<p>Création de serveurs et d'API robustes en utilisant des technologies back-end telles que Php , Symfony , Laravel etc.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="rocket-launch" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Hébergement et Déploiement</h2>
+		<p>Expérience dans le déploiement d'applications web sur des plateformes cloud telles que AWS, Azure, Heroku, etc.</p>
+	</div>
+</section>
+
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>

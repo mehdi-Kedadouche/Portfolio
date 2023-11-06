@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Mehdi Kedadouche" description="About Jeanine White Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Découvrez mon parcours et mes compétences"
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/plan.jpg"
+					alt="Mehdi Kedadouche at work"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">À propos de moi</h2>
+				<div class="content">
+					<p>
+						Bonjour, je suis Mehdi Kedadouche, un développeur backend passionné par la création de solutions robustes et évolutives pour résoudre des problèmes complexes. Avec 2 années d'expérience dans le développement backend, j'ai acquis une solide expertise dans la conception, la mise en œuvre et l'optimisation de systèmes serveur. Mon objectif est de fournir des services performants et fiables qui soutiennent la croissance et la réussite de mes clients.
+					</p>
+					<p>
+						
+					</p>
+					<p>
+					
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Compétences clés</h2>
+				<div class="content">
+					<p><strong>Langages de programmation</strong> : Je maîtrise plusieurs langages, notamment PHP, Symfony, Laravel, et JavaScript, ce qui me permet de choisir la meilleure technologie pour chaque projet. <br><br>
+
+					<strong>Bases de données</strong>: J'ai une expertise dans la conception de bases de données relationnelles et NoSQL, avec une expérience approfondie dans l'optimisation des requêtes et la gestion des données à grande échelle. <br><br>
+						
+						<strong>API et Web Services</strong> : Je suis compétent dans la création d'API RESTful et GraphQL, ainsi que dans l'intégration de services tiers via des webhooks. <br><br>
+						
+						<strong>Sécurité</strong> : Je prends la sécurité au sérieux et suis familier avec les meilleures pratiques en matière de sécurité des applications, y compris l'authentification, l'autorisation et la gestion des menaces. <br><br>
+						
+						<strong>Déploiement et gestion de serveurs</strong> : J'ai de l'expérience dans le déploiement de serveurs sur des plateformes telles que AWS, Azure et Google Cloud, ainsi que dans la configuration et la gestion de conteneurs Docker. <br><br>
+						
+						<strong>Tests et débogage</strong> : Je suis rigoureux en matière de tests unitaires, d'intégration et de débogage pour garantir la stabilité et la qualité du code.
+						
+						</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					
+						<strong>Résolution de problèmes </strong>: La capacité à analyser les problèmes de manière critique et à trouver des solutions créatives est essentielle pour résoudre les défis techniques.<br><br>
+
+						<strong>Pensée analytique</strong> : Pouvoir décomposer un problème complexe en étapes plus simples pour le comprendre en profondeur.<br><br>
+
+						<strong>Communication</strong> : La communication claire et efficace est cruciale, que ce soit pour collaborer avec des collègues, expliquer des concepts techniques à des non-techniciens ou interagir avec des clients.<br><br>
+
+						<strong>Travail d'équipe</strong> : La capacité à travailler en équipe, à partager des idées et à collaborer avec d'autres personnes pour atteindre un objectif commun.<br><br>
+
+						<strong>Gestion du temps</strong> : La capacité à gérer efficacement son temps et à hiérarchiser les tâches pour respecter les délais.<br><br>
+
+						<strong>Auto-apprentissage</strong> : Être capable d'apprendre de nouvelles compétences et de s'adapter rapidement aux évolutions technologiques.<br><br>
+
+						<strong>Gestion du stress</strong> : Pouvoir gérer le stress et la pression qui peuvent accompagner les échéances serrées ou les problèmes techniques.<br><br>
+
+						<strong>Adaptabilité</strong> : Être ouvert au changement et capable de s'adapter à de nouvelles technologies, méthodologies ou environnements de travail.
+					
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
