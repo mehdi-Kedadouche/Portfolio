@@ -90,15 +90,15 @@ const projects = (await getCollection('work'))
 					<Grid variant="small">
 					  {
 						[
-						  { brand: 'javaScript', imgSrc: '../public/assets/udemy.png' },
-						  { brand: 'BuzzFeed', imgSrc: 'chemin/vers/image2.jpg' },
-						  { brand: 'The Next Web', imgSrc: 'chemin/vers/image3.jpg' },
-						  { brand: 'awwwards.', imgSrc: 'chemin/vers/image4.jpg' },
-						  { brand: 'TechCrunch', imgSrc: 'chemin/vers/image5.jpg' }
+						  { imgSrc: '../public/assets/udemy.png' },
+						  {  imgSrc: '../public/assets/udemy.png' },
+						  {  imgSrc: '../public/assets/udemy.png' },
+						  {  imgSrc: '../public/assets/udemy.png' },
+						  { imgSrc: '../public/assets/udemy.png' }
 						].map((item) => (
 						  <li class="mention-card">
-							<img src={item.imgSrc} alt={item.brand} />
-							<p>{item.brand}</p>
+							<img src={item.imgSrc}  />
+							
 						  </li>
 						))
 					  }
