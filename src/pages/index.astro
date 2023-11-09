@@ -79,30 +79,44 @@ const projects = (await getCollection('work'))
 			</section>
 
 			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
+				<header class="section-header stack gap-2 lg:gap-4 mb-3">
 					<h3>Education</h3>
-					<p>
+					<p class="mb-3">
 						Vous trouverez ci-dessous l'ensemble de mes formations.
-					</p>
+					</p><br>
 				</header>
 
 				<div class="gallery">
 					<Grid variant="small">
-					  {
+					  <!-- {
 						[
-						  { imgSrc: '../public/assets/udemy.png' },
-						  {  imgSrc: '../public/assets/udemy.png' },
-						  {  imgSrc: '../public/assets/udemy.png' },
-						  {  imgSrc: '../public/assets/udemy.png' },
-						  { imgSrc: '../public/assets/udemy.png' }
-						].map((item) => (
+						  { imgSrc: '/assets/udemy.png' },
+						  {  imgSrc: '/assets/udemy.png' },
+						  {  imgSrc: '/assets/udemy.png' },
+					
+						].map((item) => ( -->
 						  <li class="mention-card">
-							<img src={item.imgSrc}  />
-							
+							<!-- <img src={item.imgSrc}  /> -->
+							<img
+							alt="Mehdi smiling "
+							width="240"
+							height="310"
+							src="/assets/udemy.png"
+						/>
 						  </li>
-						))
+						  <li class="mention-card">
+							<!-- <img src={item.imgSrc}  /> -->
+							<img
+							alt="Mehdi smiling "
+							margin-top: = "25"
+							width="240"
+							height="210"
+							src="/assets/attestation.png"
+						/>
+						  </li>
+						<!-- ))
 					  }
-					</Grid>
+					</Grid> -->
 				  </div>
 			</section>
 		</main>
@@ -112,6 +126,34 @@ const projects = (await getCollection('work'))
 </BaseLayout>
 
 <style>
+.mention-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.mention-card img {
+  max-width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.mention-card img:hover {
+  transform: scale(1.2); /* Ajustez la valeur de l'échelle selon vos préférences */
+}
+
+.mention-card img.zoomed {
+  transform: scale(2); /* Ajustez la valeur de l'échelle pour un zoom plus important */
+  transform-origin: center; /* Ajuste l'origine de la transformation au centre de l'image */
+
+  top: 50%; /* Centre vertical */
+  left: 100%; /* Centre horizontal */
+  max-width: 100%; /* Pour s'assurer que l'image ne dépasse pas l'écran */
+  transition: transform 0.2s;
+}
+
+
 	.hero {
 		display: flex;
 		flex-direction: column;
@@ -255,3 +297,15 @@ const projects = (await getCollection('work'))
 		}
 	}
 </style>
+
+<script>
+	console.log("ici");
+	const educationImages = document.querySelectorAll('.mention-card img');
+  
+	educationImages.forEach((image) => {
+	  image.addEventListener('click', () => {
+		image.classList.toggle('zoomed');
+	  });
+	});
+  </script>
+  

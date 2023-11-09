@@ -8,9 +8,7 @@ tags:
   - React
   - TypeScript
   - Symfony
-  - Redux 
-  - MySql
-  - Twig
+
 ---
 ##### [Visitez CryptiWiki ](http://cryptiwiki.fr/ "Site officiel de 'CryptiWiki'")
 ## CryptiWiki c'est quoi ? 
