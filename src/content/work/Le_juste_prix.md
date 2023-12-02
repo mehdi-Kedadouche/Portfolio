@@ -11,7 +11,8 @@ tags:
   - Javascript
 ---
 
-##### [Visitez Le Juste prix ](http://LeJusteprix.fr/ "Site officiel de 'Le Juste prix'")
+##### [Visitez Le Juste prix ](http://le-juste-prix.vercel.app
+ "Site officiel de 'Le Juste prix'")
 ## Le Juste prix c'est quoi ? 
 
 > Le fameux jeu télévisé présenté par Vincent Lagaffe maintenant en application.
