@@ -11,7 +11,7 @@ tags:
   - Html/Css
   - JavaScript
 ---
-##### [Visitez GitHubInfo  ](http://GitHubInfo.fr/ "Site officiel de 'GitHubInfo'")
+##### [Visitez GitHubInfo  ](https://user-github-sooty.vercel.app/ "Site officiel de 'GitHubInfo'")
 
 ## GitHubInfo  c'est quoi ? 
 
