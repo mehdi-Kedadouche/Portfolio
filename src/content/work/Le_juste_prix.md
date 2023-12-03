@@ -1,7 +1,7 @@
 ---
 title: Le juste prix
 publishDate: 2019-12-01 00:00:00
-img: /assets/juste.png
+img: /assets/justeprix.png
 img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: find a just price for win
 
