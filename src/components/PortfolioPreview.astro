@@ -27,10 +27,15 @@ const { data, slug } = Astro.props.project;
 		font-family: var(--font-brand);
 		font-size: var(--text-lg);
 		font-weight: 500;
-		transition: box-shadow var(--theme-transition);
+	    transition: box-shadow 0.3s ease, transform 0.5s ease; /* Transition plus lente pour le zoom */
+
+		transform: scale(1); /* État initial sans zoom */
+
 	}
 
 	.card:hover {
+		transform: scale(1.05); /* Zoom de 10 % au survol */
+
 		box-shadow: var(--shadow-md);
 	}
 
