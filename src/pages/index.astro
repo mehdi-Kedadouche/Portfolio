@@ -78,10 +78,10 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
+			<section id="education" class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4 mb-3">
 					<h3>Education</h3>
-					<p class="mb-3">
+					<p class="mb-1">
 						Vous trouverez ci-dessous l'ensemble de mes formations.
 					</p><br>
 					<div class='caroussel_diapo'>
@@ -90,17 +90,15 @@ const projects = (await getCollection('work'))
 						<label for="carou_un"></label>
 						<input id="carou_deux" name="rotation" type="radio">
 						<label for="carou_deux"></label>
-						<input id="carou_trois" name="rotation" type="radio">
-						<label for="carou_trois"></label>
+					
 			
 						
 						<div class="contenu_carou">
 						
 						<div class="caroussel">
-						<img src="/assets/attestation.png" width="240"
-						height="310" >
-						<img src="/assets/udemy.png" width="240"
-						height="310">
+			
+						<img src="/assets/attestation.png" >
+						<img src="/assets/udemy.png">
 						
 						</div>
 						
@@ -110,46 +108,24 @@ const projects = (await getCollection('work'))
 						
 				</header>
 
-				<!-- <div class="gallery">
-					<Grid variant="small">
-					  <!-- {
-						[
-						  { imgSrc: '/assets/udemy.png' },
-						  {  imgSrc: '/assets/udemy.png' },
-						  {  imgSrc: '/assets/udemy.png' },
-					
-						].map((item) => ( -->
-						  <li class="mention-card">
-							<!-- <img src={item.imgSrc}  /> -->
-							<img
-							alt="Mehdi smiling "
-							width="240"
-							height="310"
-							src="/assets/udemy.png"
-						/>
-						  </li>
-						  <li class="mention-card">
-							<!-- <img src={item.imgSrc}  /> -->
-							<img
-							alt="Mehdi smiling "
-							margin-top: = "25"
-							width="240"
-							height="210"
-							src="/assets/attestation.png"
-						/>
-						  </li>
-						<!-- ))
-					  }
-					</Grid> -->
-				  </div> -->
+		
 			</section>
 		</main>
-		src="/assets/attestation.png"     	src="/assets/udemy.png"
+	
 		<ContactCTA />
 	</div>
 </BaseLayout>
 
 <style>
+
+#education {
+
+    /* background-color: #c3c3c33d; */
+    height: 45em;
+    border-radius: 5%;
+    padding: 10px;
+}
+
 .mention-card {
   display: flex;
   justify-content: center;
@@ -158,7 +134,7 @@ const projects = (await getCollection('work'))
 }
 
 .mention-card img {
-  max-width: 100%;
+  width: 100%;
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -343,7 +319,9 @@ left:-9999px
 .caroussel_diapo{	
 
 text-align:center;
-margin:5rem auto;
+margin:1rem auto;
+width: 15em;
+filter: drop-shadow(0 0 0.75rem white);
 
 }
 	
@@ -371,8 +349,8 @@ left: 0;
 opacity: 0;
 outline: 1px solid transparent;
 backface-visibility: hidden;
-transition: 1s opacity
-	
+transition: 1s opacity;
+width: 500px;
 }
 
 	
@@ -597,6 +575,5 @@ transform:rotateY(45deg) translateZ(540px) scale(1)
   </script>
   
 
-  /* carousel */ 
 
   

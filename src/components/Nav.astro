@@ -23,10 +23,18 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 <nav>
 	<div class="menu-header">
-		<a href="/" class="site-title">
+		
+
+<div class=effet-3d>
+	<a href="/" class="site-title">
 			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
 			&lt;Mehdiv&gt;
 		</a>
+
+</div>
+
+
+	
 		<menu-button>
 			<template>
 				<button class="menu-button" aria-expanded="false">
@@ -154,6 +162,67 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 </script>
 
 <style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,200;0,300;0,400;1,200&family=Bangers&family=Carter+One&family=Roboto+Condensed&display=swap');
+
+*,*::before,*::after{box-sizing: border-box;}
+
+.effet-3d {
+	
+margin: 2rem auto;
+display: flex;
+justify-content: center;
+color: #1b130d;
+font-size: calc(65vw / 18);
+letter-spacing: .015em;
+text-shadow: 0 0 0 rgb(207, 207, 207),
+.0025em .0025em 0 purple,
+.005em .005em 0 purple,
+.0075em .0075em 0 purple,
+.01em .01em 0 purple,
+.0125em .0125em 0 rgba(128, 0, 128, 0.589),
+.015em .015em 0 purple,
+.0175em .0175em 0 purple,
+.02em .02em 0 purple,
+.0225em .0225em 0 purple,
+.025em .025em 0 purple,
+.0275em .0275em 0 purple,
+.03em .03em 0 purple,
+.0325em .0325em 0 purple,
+.035em .035em 0 purple,
+.0375em .0375em 0 purple,
+.04em .04em 0 purple,
+.0425em .0425em 0 purple, 
+.045em .045em 0 purple,
+.0475em .0475em 0 purple,
+.05em .05em 0 purple,
+.0525em .0525em 0 purple,
+.055em .055em 0 purple,
+.0575em .0575em 0 purple,
+.06em .06em 0 purple,
+.0625em .0625em 0 purple,
+.065em .065em 0 purple,
+.0675em .0675em 0 purple, 
+.07em .07em 0 purple,
+.0725em .0725em 0 purple,
+.075em .075em 0 purple,
+.0775em .0775em 0 purple,
+.08em .08em 0 purple,
+.0825em .0825em 0 purple,
+.085em .085em 0 purple,
+.0875em .0875em 0 purple,
+.09em .09em 0 purple,
+.0925em .0925em 0 purple,
+.095em .095em 0 purple,
+.0975em .0975em 0 purple,
+.1em .1em 0 purple
+	
+	}
+
+
+
+
 	nav {
 		z-index: 9999;
 		position: relative;
@@ -174,7 +243,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		gap: 0.5rem;
 		align-items: center;
 		line-height: 1.1;
-		color: var(--gray-0);
+		color: white;
 		text-decoration: none;
 		font-size: 25px;
 	}
@@ -293,6 +362,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 		.site-title {
 			font-size: 28px;
+			padding-right: 3em;
 		}
 
 		.menu-content {
