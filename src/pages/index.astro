@@ -41,8 +41,9 @@ const projects = (await getCollection('work'))
 				</Hero>
 
 				<img
+					class="photo"				
 					alt="Mehdi smiling "
-					width="480"
+					width="360"
 					height="620"
 					src="/assets/maphoto.jpg"
 				/>
@@ -118,6 +119,21 @@ const projects = (await getCollection('work'))
 
 <style>
 
+
+
+.photo {
+  animation: scale 2s both;
+}
+
+@keyframes scale {
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 #education {
 
     /* background-color: #c3c3c33d; */
@@ -161,7 +177,8 @@ const projects = (await getCollection('work'))
 		gap: 2rem;
 		text-shadow: 5px 5px 4px #a1229d4d;
 	}
-	.site-title{ font-size: 20px;}
+	.site-title{ font-size: 20px;
+	}
 	.roles {
 		display: none;
 	}

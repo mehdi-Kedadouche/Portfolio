@@ -170,7 +170,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 .effet-3d {
 	
-margin: 2rem auto;
+/* margin: 2rem auto; */
 display: flex;
 justify-content: center;
 color: #1b130d;
@@ -355,6 +355,9 @@ text-shadow: 0 0 0 rgb(207, 207, 207),
 			padding: 2.5rem 5rem;
 			gap: 1rem;
 		}
+		/* .effet-3d {
+	
+	margin: 2rem auto;} */
 
 		.menu-header {
 			padding: 0;
@@ -363,7 +366,16 @@ text-shadow: 0 0 0 rgb(207, 207, 207),
 		.site-title {
 			font-size: 28px;
 			padding-right: 3em;
+			animation: slide-in 1.1s both;
 		}
+		@keyframes slide-in {
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 		.menu-content {
 			display: contents;
