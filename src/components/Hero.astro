@@ -35,6 +35,7 @@ const { align = 'center', tagline, title } = Astro.props;
 	.title {
 		font-size: var(--text-3xl);
 		color: var(--gray-0);
+	
 	}
 
 	@media (min-width: 50em) {
@@ -61,7 +62,8 @@ const { align = 'center', tagline, title } = Astro.props;
 	#title-home {
   display:inline-flex;
   overflow:hidden;
-  white-space:wrap;
+  white-space:normal;
+  
 }
 
 #title-home:first-of-type {    /* For increasing performance 
@@ -97,5 +99,12 @@ const { align = 'center', tagline, title } = Astro.props;
     30% {width:35px;}
     80% {opacity:1;}
     100% {opacity:1;width:650px;}
+}
+
+@media only screen and (max-width: 767px) {
+	#title-home{
+		max-width: 260px !important;
+	font-size: var(--text-2xl) !important;}
+
 }
 </style>
