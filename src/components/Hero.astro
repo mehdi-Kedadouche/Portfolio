@@ -2,15 +2,14 @@
 interface Props {
 	title: string;
 	tagline?: string;
-	align?: 'start' | 'center';
+	align?: "start" | "center";
 }
 
-const { align = 'center', tagline, title } = Astro.props;
+const { align = "center", tagline, title } = Astro.props;
 ---
 
-<div class:list={['hero stack gap-4', align]}>
+<div class:list={["hero stack gap-4", align]}>
 	<div class="stack gap-2">
-		
 		<h1 class="title" id="title-home">{title}</h1>
 
 		{tagline && <p class="tagline">{tagline}</p>}
@@ -23,20 +22,21 @@ const { align = 'center', tagline, title } = Astro.props;
 		font-size: var(--text-lg);
 		text-align: center;
 	}
-
+	/* rgb(179, 91, 238) 11%,
+			rgb(255, 255, 255) 35%,
+			rgb(46, 156, 189) 100% */
 	.title,
 	.tagline {
-		text-shadow: 5px 5px 4px #c389c1fa;
+		/* text-shadow: 2px 2px 3px #fcfcfc67; */
 		margin-inline: auto;
 		text-align: center;
-
 	}
 
 	.title {
-		font-size: var(--text-3xl);
-		color: var(--gray-0);
-	
-	}
+  
+}
+
+
 
 	@media (min-width: 50em) {
 		.hero {
@@ -54,57 +54,87 @@ const { align = 'center', tagline, title } = Astro.props;
 
 		.title {
 			font-size: var(--text-5xl);
-			
 		}
 	}
 
-
-	#title-home {
-  display:inline-flex;
-  overflow:hidden;
-  white-space:normal;
-  
+	  #title-home {
+      display: inline-flex;
+      overflow: hidden;
+      white-space: normal;
+	  background: linear-gradient(to right, rgb(76, 0, 253), #ffffff 35%, #0aaee0);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+      animation: showup 1s forwards, reveal 1.5s forwards ,gradient 2.5s linear infinite;
+      
+    }
+	@keyframes gradient {
+    0% {
+        background-position: 0% 75%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 70%;
+    }
 }
-
-#title-home:first-of-type {    /* For increasing performance 
-                       ID/Class should've been used. 
-                       For a small demo 
-                       it's okaish for now */
-  animation: showup 10s forwards ;
-}
-
-#title-home:last-of-type {
-  width: 100px;
-  animation: reveal 5s forwards;
-}
-
 
 @keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:1;}
+  0% {
+	opacity: 0;
+  }
+  20% {
+	opacity: 1;
+  }
+  80% {
+	opacity: 1;
+  }
+  100% {
+	opacity: 1;
+  }
 }
 
-@keyframes slidein {
-    0% { margin-left:-800px; }
-    20% { margin-left:-800px; }
-    35% { margin-left:0px; }
-    100% { margin-left:0px; }
-}
+/* @keyframes slidein {
+  0% {
+	margin-left: -800px;
+  }
+  20% {
+	margin-left: -800px;
+  }
+  35% {
+	margin-left: 0px;
+  }
+  100% {
+	margin-left: 0px;
+  }
+} */
 
 @keyframes reveal {
-    0% {opacity:0;width:0px;}
-    20% {opacity:1;width:0px;}
-    30% {width:35px;}
-    80% {opacity:1;}
-    100% {opacity:1;width:650px;}
+  0% {
+	opacity: 0;
+	width: 0px;
+  }
+  20% {
+	opacity: 1;
+	width: 0px;
+  }
+  30% {
+	width: 35px;
+  }
+  80% {
+	opacity: 1;
+  }
+  100% {
+	opacity: 1;
+	width: 661px;
+  }
 }
 
-@media only screen and (max-width: 767px) {
-	#title-home{
-		max-width: 260px !important;
-	font-size: var(--text-2xl) !important;}
-
-}
+	@media only screen and (max-width: 767px) {
+		#title-home {
+			max-width: 260px !important;
+			font-size: var(--text-2xl) !important;
+		}
+	}
 </style>

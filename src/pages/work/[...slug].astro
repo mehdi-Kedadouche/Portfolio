@@ -4,7 +4,7 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 import ContactCTA from '../../components/ContactCTA.astro';
-import Hero from '../../components/Hero.astro';
+import Titre from '../../components/Titre.astro';
 import Icon from '../../components/Icon.astro';
 import Pill from '../../components/Pill.astro';
 
@@ -33,14 +33,14 @@ const { Content } = await entry.render();
 			<header>
 				<div class="wrapper stack gap-2">
 					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
-					<Hero title={entry.data.title} align="start">
+					<Titre titre={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
 								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
 							</div>
 							<p class="description">{entry.data.description}</p>
 						</div>
-					</Hero>
+					</Titre>
 				</div>
 			</header>
 			<main class="wrapper">
@@ -140,7 +140,7 @@ const { Content } = await entry.render();
 		}
 
 		.details {
-			flex-direction: row;
+			/* flex-direction: row; */
 			gap: 2.5rem;
 		}
 
