@@ -1,19 +1,38 @@
 <div class="pill"><slot /></div>
 
 <style>
-	.pill {
-		display: flex;
-		padding: 0.5rem 1rem;
-		gap: 0.5rem;
-		color: var(--accent-text-over);
-		border: 1px solid var(--accent-regular);
-		 background-color: #5701a9b0; /*var(--accent-regular); */
-		border-radius: 999rem;
-		font-size: 0.975rem;
-		line-height: 1.35;
-		white-space: nowrap;
-		
-	}
+/* Styles de base pour .pill */
+.pill {
+    display: flex;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    color: var(--accent-text-over);
+    border: 1px solid var(--accent-regular);
+    background-color: #5701a9b0; /*var(--accent-regular); */
+    border-radius: 999rem;
+    font-size: 0.975rem;
+    line-height: 1.35;
+    white-space: nowrap;
+    opacity: 0; /* Initiallement invisible */
+    visibility: hidden; /* Initiallement caché */
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Appliquer l'animation aux éléments .pill */
+.pill {
+    animation: fadeIn 0.8s ease-in-out forwards; /* Durée de l'animation : 0.5s */
+}
 
 
 	@media only screen and (max-width: 767px) {

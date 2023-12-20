@@ -24,9 +24,24 @@ const { href } = Astro.props;
 		background: var(--gradient-accent-orange);
 		box-shadow: var(--shadow-md);
 		white-space: nowrap;
-
-		animation: wiggle 4s linear infinite;
+		transition: 0.5s;
+  		transition-property: box-shadow;
+		/* animation: wiggle 4s linear infinite; */
 	}
+
+	a {
+		background: var(--gradient-accent-orange);
+  box-shadow: 0 0 25px rgb(143, 68, 230);
+}
+
+a:hover {
+	box-shadow: 0 0 5px  rgb(137, 9, 211),
+              0 0 25px rgb(137, 9, 211),
+              0 0 50px  rgb(137, 9, 211),
+              0 0 100px  rgb(82, 4, 131);
+}
+
+
 
 	
 /* Keyframes */
