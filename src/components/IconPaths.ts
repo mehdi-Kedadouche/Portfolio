@@ -46,6 +46,7 @@ export const iconPaths = {
 	`,
 };
 
+
 // * Vous voulez en ajouter davantage ?
 //  * 1. Recherchez l'icône souhaitée sur les icônes Phosphor.
 //  * 2. Cliquez sur « Copier SVG ».
